@@ -1,5 +1,15 @@
-function App() {
-  return <div>App</div>;
-}
+import { BrowserRouter, Route, Routes } from "react-router";
+import Home from "./pages/home/Home";
+import Auth from "./pages/auth/Auth";
 
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 export default App;
