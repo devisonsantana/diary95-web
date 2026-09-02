@@ -1,4 +1,4 @@
-import { FeatureCard } from "./FeatureCard";
+import { FeatureCard } from "../feature-card/FeatureCard";
 import styles from "./Features.module.css";
 
 export const Features = () => {
