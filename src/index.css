@@ -2,8 +2,17 @@
 
 :root {
   --void: #0a0118;
+  --panel: #150a26;
+
+  --border: #4b2a7a;
+  --border-lit: #8a5cd6;
+
+  --cyan: #5ce1f0;
+  --magenta: #ff3fa4;
+  --purple: #b967ff;
 
   --text: #e9e6ff;
+  --text-dim: #9086b8;
 
   --font-display: "Press Start 2P", monospace;
   --font-mono: "JetBrains Mono", monospace;

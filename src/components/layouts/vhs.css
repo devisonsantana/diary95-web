@@ -1,0 +1,309 @@
+/* =========================================================
+   VHS GLOBAL EFFECT
+   ========================================================= */
+
+.vhs-effect {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  pointer-events: none;
+  overflow: hidden;
+
+  /* leve aparência de fita antiga */
+  mix-blend-mode: normal;
+
+  /* Não deixa o overlay bloquear cliques */
+  user-select: none;
+}
+
+/* =========================================================
+   SCANLINES
+   ========================================================= */
+
+.vhs-scanlines {
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   NOISE
+   ========================================================= */
+
+.vhs-noise {
+  position: absolute;
+  inset: -50%;
+
+  opacity: 0.12;
+
+  background-image: repeating-radial-gradient(
+    circle at 0 0,
+    rgba(255, 255, 255, 0.35) 0,
+    rgba(255, 255, 255, 0.35) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+
+  background-size: 4px 4px;
+
+  animation: vhs-noise 0.12s steps(2) infinite;
+}
+
+@keyframes vhs-noise {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(3%, -2%);
+  }
+
+  50% {
+    transform: translate(-2%, 3%);
+  }
+
+  75% {
+    transform: translate(2%, 2%);
+  }
+
+  100% {
+    transform: translate(-3%, -2%);
+  }
+}
+
+/* =========================================================
+   RGB SPLIT
+   ========================================================= */
+
+.vhs-glitch {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  mix-blend-mode: screen;
+}
+
+.vhs-glitch-red {
+  background: rgba(255, 0, 0, 0.15);
+
+  transform: translateX(-2px);
+
+  animation: rgb-red 2s steps(1) infinite;
+}
+
+.vhs-glitch-blue {
+  background: rgba(0, 80, 255, 0.15);
+
+  transform: translateX(2px);
+
+  animation: rgb-blue 1.7s steps(1) infinite;
+}
+
+@keyframes rgb-red {
+  0%,
+  85%,
+  100% {
+    transform: translateX(-2px);
+  }
+
+  86% {
+    transform: translateX(-8px);
+  }
+
+  88% {
+    transform: translateX(4px);
+  }
+
+  90% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes rgb-blue {
+  0%,
+  75%,
+  100% {
+    transform: translateX(2px);
+  }
+
+  76% {
+    transform: translateX(7px);
+  }
+
+  78% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+/* =========================================================
+   HORIZONTAL TRACKING
+   ========================================================= */
+
+.vhs-tracking {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 80px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.04) 55%,
+    transparent 100%
+  );
+
+  opacity: 0;
+
+  animation: vhs-tracking 7s linear infinite;
+}
+
+@keyframes vhs-tracking {
+  0% {
+    top: -100px;
+    opacity: 0;
+    transform: skewX(0deg);
+  }
+
+  5% {
+    opacity: 0.5;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  45% {
+    top: 30%;
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 0.8;
+    transform: skewX(-2deg);
+  }
+
+  48% {
+    opacity: 0.2;
+    transform: skewX(3deg);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  85% {
+    top: 80%;
+    opacity: 0;
+  }
+
+  86% {
+    opacity: 0.6;
+  }
+
+  88% {
+    opacity: 0;
+  }
+
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   GLITCH BARS
+   ========================================================= */
+
+.vhs-effect::before,
+.vhs-effect::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  width: 100%;
+
+  pointer-events: none;
+}
+
+.vhs-effect::before {
+  height: 3px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  animation: vhs-glitch-bar 4s steps(1) infinite;
+}
+
+.vhs-effect::after {
+  height: 12px;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  animation: vhs-glitch-bar-2 6s steps(1) infinite;
+}
+
+@keyframes vhs-glitch-bar {
+  0%,
+  70%,
+  100% {
+    top: -10px;
+    opacity: 0;
+  }
+
+  72% {
+    top: 20%;
+    opacity: 0.7;
+  }
+
+  73% {
+    top: 21%;
+    opacity: 0.2;
+  }
+
+  74% {
+    top: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes vhs-glitch-bar-2 {
+  0%,
+  45%,
+  100% {
+    top: -20px;
+    opacity: 0;
+  }
+
+  47% {
+    top: 55%;
+    opacity: 0.5;
+  }
+
+  49% {
+    top: 56%;
+    opacity: 0.1;
+  }
+
+  51% {
+    top: 55%;
+    opacity: 0;
+  }
+}
