@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  --void: #0a0118;
+
+  --text: #e9e6ff;
+
+  --font-display: "Press Start 2P", monospace;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  background-color: var(--void);
+}
