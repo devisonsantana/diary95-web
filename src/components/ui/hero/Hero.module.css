@@ -38,8 +38,8 @@
   letter-spacing: 0.5px;
   text-decoration: none;
   color: #0a0118;
-  background: linear-gradient(90deg, var(--purple), var(--magenta));
-  border: 2px solid var(--border-lit);
+  background: #e7e2fc;
+  border: 2px solid var(--border);
   padding: 10px 24px;
   margin-top: 8px;
 }

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
 :root {
-  --void: #0a0118;
-  --panel: #150a26;
+  --void: #000000;
+  --panel: #020102;
 
-  --border: #4b2a7a;
+  --border: #262528;
   --border-lit: #8a5cd6;
 
   --cyan: #5ce1f0;
@@ -13,6 +13,10 @@
 
   --text: #e9e6ff;
   --text-dim: #9086b8;
+
+  --red: #ff4d6d;
+  --green: #4dffb0;
+  --yellow: #ffe066;
 
   --font-display: "Press Start 2P", monospace;
   --font-mono: "JetBrains Mono", monospace;
@@ -28,5 +32,5 @@ body {
   color: var(--text);
   font-family: var(--font-mono);
   line-height: 1.5;
-  background-color: var(--void);
+  background: var(--void);
 }
