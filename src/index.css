@@ -7,16 +7,23 @@
   --border: #262528;
   --border-lit: #8a5cd6;
 
-  --cyan: #5ce1f0;
-  --magenta: #ff3fa4;
-  --purple: #b967ff;
-
-  --text: #e9e6ff;
+  --text: #ffffff;
   --text-dim: #9086b8;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
 
   --red: #ff4d6d;
   --green: #4dffb0;
   --yellow: #ffe066;
+  --cyan: #5ce1f0;
+  --magenta: #ff3fa4;
+  --purple: #b967ff;
 
   --font-display: "Press Start 2P", monospace;
   --font-mono: "JetBrains Mono", monospace;

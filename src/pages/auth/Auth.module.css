@@ -1,0 +1,35 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 40px;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.btn {
+  border: 1px solid #e2e2e2;
+  width: 120px;
+}
+
+.btn:hover {
+  background: #e2e2e2;
+  color: #000;
+}
+
+.btnActive {
+  background: #e2e2e2;
+  color: #000;
+  box-shadow:
+    0 0 0 1px #000,
+    0 0 16px rgba(185, 103, 255, 0.5);
+}

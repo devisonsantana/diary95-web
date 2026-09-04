@@ -1,0 +1,36 @@
+.win {
+  border: 2px solid var(--border-lit);
+  background: var(--panel);
+  box-shadow:
+    0 0 0 1px #000,
+    0 0 30px rgba(185, 103, 255, 0.28);
+  width: 100%;
+  max-width: 360px;
+}
+
+.winTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  background: linear-gradient(90deg, var(--purple), var(--magenta));
+  padding: 10px 12px;
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dots span {
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.winBody {
+  padding: 20px;
+}
