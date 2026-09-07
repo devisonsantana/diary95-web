@@ -1,6 +1,6 @@
 .btn {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-sm);
   letter-spacing: 0.5px;
   border: none;
   padding: 10px 20px;

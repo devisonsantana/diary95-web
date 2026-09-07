@@ -7,7 +7,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-xs);
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--cyan);
@@ -15,10 +15,10 @@
 
 .input {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-sm);
   color: var(--text);
   border: 2px solid var(--border);
-  padding: 10px 12px;
+  padding: 10px 16px;
 }
 
 .input:focus {
@@ -43,6 +43,6 @@
 
 .errorText {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-xs);
   color: var(--red);
 }

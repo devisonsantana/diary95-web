@@ -5,3 +5,7 @@ export * from "./footer/Footer";
 export * from "./hero/Hero";
 export * from "./input/Input";
 export * from "./window/Window1";
+export * from "./type-badge/TypeBadge";
+export * from "./empty-entry/EmptyEntry";
+export * from "./entry-card/EntryCard";
+export * from "./statbox/StatBox";

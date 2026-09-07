@@ -1,0 +1,23 @@
+.wrapper {
+  text-align: center;
+  padding: 40px 16px;
+  border: 2px dashed var(--border);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.action {
+  margin-top: 16px;
+}
