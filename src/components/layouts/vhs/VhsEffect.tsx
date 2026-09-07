@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import "./vhs.css";
 
-export default function VhsEffect() {
+export const VhsEffect = () => {
   return (
     <>
       <div className="vhs-effect" aria-hidden="true">
@@ -14,4 +14,4 @@ export default function VhsEffect() {
       <Outlet />
     </>
   );
-}
+};

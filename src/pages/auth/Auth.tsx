@@ -1,15 +1,15 @@
-import { Button } from "@/components/ui/button/Button";
+import { Button, Input, Window1 } from "@/components/ui/";
+import { Loading } from "@/components/layouts/";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import styles from "./Auth.module.css";
-import { Loading } from "@/components/layouts/loading/Loading";
-import { Input } from "@/components/ui/input/Input";
-import { Window1 } from "@/components/ui/window/Window1";
-import { useEffect, useState } from "react";
 
 function Auth() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [mode, setMode] = useState<Mode>("login");
   const [errors, setErrors] = useState<FormErrors>({});
   const [values, setValues] = useState(initialValues);
+  const navigate = useNavigate();
 
   const validate = () => {
     const nextErrors: FormErrors = {};
@@ -38,8 +38,16 @@ function Auth() {
       setErrors(nextErrors);
       return;
     }
+
     setErrors({});
     setLoading(true);
+
+    new Promise(() => {
+      setTimeout(() => {
+        setLoading(false);
+        navigate("/dashboard", { replace: true });
+      }, 5000);
+    });
   };
 
   function switchMode(nextMode: Mode) {
@@ -47,11 +55,6 @@ function Auth() {
     setValues(initialValues);
     setErrors({});
   }
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 5000);
-    return () => clearTimeout(timeout);
-  }, [loading]);
 
   return (
     <div className={styles.page}>

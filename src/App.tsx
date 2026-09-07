@@ -1,17 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./pages/home/Home";
 import Auth from "./pages/auth/Auth";
-import VhsEffect from "./components/layouts/vhs/VhsEffect";
+import Dashboard from "./pages/dashboard/Dashboard";
+import { VhsEffect } from "./components/layouts/";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<VhsEffect />}>
-          <Route index element={<Home />} />
-          <Route path="/auth" element={<Auth />} />
-        </Route>
-      </Routes>
+      <AppProvider>
+        <Routes>
+          <Route element={<VhsEffect />}>
+            <Route index element={<Home />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+        </Routes>
+      </AppProvider>
     </BrowserRouter>
   );
 }
