@@ -1,17 +1,13 @@
-import { Outlet } from "react-router";
-import "./vhs.css";
+import styles from "./VhsEffect.module.css";
 
 export const VhsEffect = () => {
   return (
-    <>
-      <div className="vhs-effect" aria-hidden="true">
-        <div className="vhs-noise" />
-        <div className="vhs-scanlines" />
-        <div className="vhs-tracking" />
-        <div className="vhs-glitch vhs-glitch-red" />
-        <div className="vhs-glitch vhs-glitch-blue" />
-      </div>
-      <Outlet />
-    </>
+    <div className={styles.vhsEffect} aria-hidden="true">
+      <div className={styles.vhsNoise} />
+      <div className={styles.vhsScanlines} />
+      <div className={styles.vhsTracking} />
+      <div className={`${styles.vhsGlitch} ${styles.vhsGlitchRed}}`} />
+      <div className={`${styles.vhsGlitch} ${styles.vhsGlitchBlue}`} />
+    </div>
   );
 };

@@ -2,7 +2,7 @@
    VHS GLOBAL EFFECT
    ========================================================= */
 
-.vhs-effect {
+.vhsEffect {
   position: fixed;
   inset: 0;
   z-index: 999999;
@@ -20,7 +20,7 @@
    SCANLINES
    ========================================================= */
 
-.vhs-scanlines {
+.vhsScanlines {
   position: absolute;
   inset: 0;
 
@@ -39,7 +39,7 @@
    NOISE
    ========================================================= */
 
-.vhs-noise {
+.vhsNoise {
   position: absolute;
   inset: -50%;
 
@@ -84,7 +84,7 @@
    RGB SPLIT
    ========================================================= */
 
-.vhs-glitch {
+.vhsGlitch {
   position: absolute;
   inset: 0;
 
@@ -95,7 +95,7 @@
   mix-blend-mode: screen;
 }
 
-.vhs-glitch-red {
+.vhsGlitchRed {
   background: rgba(255, 0, 0, 0.15);
 
   transform: translateX(-2px);
@@ -103,7 +103,7 @@
   animation: rgb-red 2s steps(1) infinite;
 }
 
-.vhs-glitch-blue {
+.vhsGlitchBlue {
   background: rgba(0, 80, 255, 0.15);
 
   transform: translateX(2px);
@@ -155,7 +155,7 @@
    HORIZONTAL TRACKING
    ========================================================= */
 
-.vhs-tracking {
+.vhsTracking {
   position: absolute;
   left: -10%;
   width: 120%;
@@ -232,8 +232,8 @@
    GLITCH BARS
    ========================================================= */
 
-.vhs-effect::before,
-.vhs-effect::after {
+.vhsEffect::before,
+.vhsEffect::after {
   content: "";
 
   position: absolute;
@@ -244,7 +244,7 @@
   pointer-events: none;
 }
 
-.vhs-effect::before {
+.vhsEffect::before {
   height: 3px;
 
   background: rgba(255, 255, 255, 0.35);
@@ -252,7 +252,7 @@
   animation: vhs-glitch-bar 4s steps(1) infinite;
 }
 
-.vhs-effect::after {
+.vhsEffect::after {
   height: 12px;
 
   background: rgba(0, 0, 0, 0.25);
