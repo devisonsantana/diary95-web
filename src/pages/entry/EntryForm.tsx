@@ -3,12 +3,14 @@ import { useNavigate } from "react-router";
 import { useApp } from "@/context/AppContext";
 import type { Entry, EntryType } from "@/types/entry";
 import { stripHtml } from "@/utils/html";
-import { Window2 } from "@/components/ui/window/Window2";
-import { Input } from "@/components/ui/input/Input";
-import { RichTextEditor } from "@/components/ui/rich-text-editor/RichTextEditor";
-import { TypeSelector } from "@/components/ui/type-selector/TypeSelector";
-import { TagInput } from "@/components/ui/tag-input/TagInput";
-import { Button } from "@/components/ui/button/Button";
+import {
+  Window2,
+  Input,
+  RichTextEditor,
+  TypeSelector,
+  TagInput,
+  Button,
+} from "@/components/ui";
 import styles from "./EntryForm.module.css";
 
 function EntryForm() {

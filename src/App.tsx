@@ -4,7 +4,7 @@ import { Shell, RootLayout } from "./components/layouts/";
 import Home from "./pages/home/Home";
 import Auth from "./pages/auth/Auth";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Entry from "./pages/entry/EntryForm";
+import NewEntry from "./pages/entry/EntryForm";
 import Catalog from "./pages/catalog/Catalog";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
               <Route path="/catalog" element={<Catalog />} />
               <Route path="/charts" element={<h1>Charts</h1>} />
 
-              <Route path="/entry/new" element={<Entry />} />
+              <Route path="/entry/new" element={<NewEntry />} />
               <Route path="/entry/:entryID" element={<h1>Entry</h1>} />
             </Route>
           </Route>

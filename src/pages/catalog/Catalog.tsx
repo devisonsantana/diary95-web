@@ -3,11 +3,13 @@ import { Link } from "react-router";
 import { useApp } from "@/context/AppContext";
 import { filterEntries } from "@/utils/filter";
 import type { EntryType } from "@/types/entry";
-import { SearchInput } from "@/components/ui/search-input/SearchInput";
-import { TypeSelector } from "@/components/ui/type-selector/TypeSelector";
-import { EntryCard } from "@/components/ui/entry-card/EntryCard";
-import { EmptyEntry } from "@/components/ui/empty-entry/EmptyEntry";
-import { Button } from "@/components/ui/button/Button";
+import {
+  SearchInput,
+  TypeSelector,
+  EntryCard,
+  EmptyEntry,
+  Button,
+} from "@/components/ui/";
 import styles from "./Catalog.module.css";
 
 function Catalog() {
