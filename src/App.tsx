@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router";
+import { AppProvider } from "./context/AppContext";
+import { Shell, RootLayout } from "./components/layouts/";
 import Home from "./pages/home/Home";
 import Auth from "./pages/auth/Auth";
 import Dashboard from "./pages/dashboard/Dashboard";
-import { Shell, RootLayout } from "./components/layouts/";
-import { AppProvider } from "./context/AppContext";
+import Entry from "./pages/entry/EntryForm";
+import Catalog from "./pages/catalog/Catalog";
 
 function App() {
   return (
@@ -16,10 +18,10 @@ function App() {
 
             <Route element={<Shell />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/catalog" element={<h1>Catalog</h1>} />
+              <Route path="/catalog" element={<Catalog />} />
               <Route path="/charts" element={<h1>Charts</h1>} />
 
-              <Route path="/entry/new" element={<h1>New Entrance</h1>} />
+              <Route path="/entry/new" element={<Entry />} />
               <Route path="/entry/:entryID" element={<h1>Entry</h1>} />
             </Route>
           </Route>

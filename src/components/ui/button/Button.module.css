@@ -30,7 +30,7 @@
 
 .ghost {
   background: transparent;
-  border-color: var(--border);
+  border: 2px solid var(--border);
   color: var(--text);
 }
 
@@ -40,6 +40,6 @@
 
 .danger {
   background: var(--panel2, #1c0e33);
-  border-color: var(--red);
+  border: 2px solid var(--red);
   color: var(--red);
 }

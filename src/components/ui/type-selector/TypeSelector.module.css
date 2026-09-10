@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.5px;
+  border: 1px solid;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition:
+    background 0.1s,
+    color 0.1s;
+}

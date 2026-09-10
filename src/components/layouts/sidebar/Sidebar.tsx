@@ -3,7 +3,7 @@ import styles from "./Sidebar.module.css";
 
 const NAV_ITEMS = [
   { to: "/dashboard", label: "DASHBOARD" },
-  { to: "/entry/new", label: "NEW" },
+  { to: "/entry/new", label: "NEW ENTRY" },
   { to: "/catalog", label: "CATALOG" },
   { to: "/charts", label: "CHARTS" },
 ];
@@ -11,21 +11,23 @@ const NAV_ITEMS = [
 export const Sidebar = () => {
   return (
     <nav className={styles.sidebar}>
-      <div className={styles.logo}>~/diary</div>
-      <ul className={styles.list}>
-        {NAV_ITEMS.map((item) => (
-          <li key={item.to}>
-            <NavLink
-              to={item.to}
-              className={({ isActive }) =>
-                isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-              }
-            >
-              {item.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.container}>
+        <div className={styles.logo}>~/diary</div>
+        <ul className={styles.list}>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive ? `${styles.link} ${styles.linkActive}` : styles.link
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };

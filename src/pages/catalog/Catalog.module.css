@@ -1,7 +1,3 @@
-body {
-  background: var(--void);
-}
-
 .page {
   padding: 16px;
   margin: 0 auto;
@@ -14,22 +10,16 @@ body {
   margin: 0 0 20px;
 }
 
-.stats {
+.filters {
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
-.section {
-  margin-top: 24px;
-}
-
-.sectionTitle {
-  font-family: var(--font-mono);
-  font-size: var(--text-md);
-  letter-spacing: 0.5px;
-  color: var(--cyan);
-  margin: 0 0 12px;
+.list {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {

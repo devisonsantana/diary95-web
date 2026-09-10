@@ -1,0 +1,50 @@
+.wrapper {
+  border: 2px solid var(--border);
+  background: var(--void2, #160828);
+}
+
+.wrapper:focus-within {
+  border-color: var(--border-lit);
+}
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 2px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.toolBtn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.5px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.toolBtnActive {
+  color: var(--text);
+  border-color: var(--border-lit);
+  background: var(--panel2, #1c0e33);
+}
+
+.content {
+  padding: 12px;
+  min-height: 180px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text);
+}
+
+.content :global(.ProseMirror) {
+  outline: none;
+}
+
+.content :global(ul),
+.content :global(ol) {
+  padding-left: 20px;
+}

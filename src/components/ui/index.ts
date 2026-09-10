@@ -9,3 +9,4 @@ export * from "./type-badge/TypeBadge";
 export * from "./empty-entry/EmptyEntry";
 export * from "./entry-card/EntryCard";
 export * from "./statbox/StatBox";
+export * from "./rich-text-editor/RichTextEditor";

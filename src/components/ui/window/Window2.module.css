@@ -5,7 +5,6 @@
     0 0 0 1px #000,
     0 0 30px rgba(185, 103, 255, 0.28);
   width: 100%;
-  max-width: 360px;
 }
 
 .winTitle {
@@ -13,7 +12,7 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: var(--text-xs);
   letter-spacing: 0.5px;
   color: var(--text);
   background: linear-gradient(90deg, var(--purple), var(--magenta));

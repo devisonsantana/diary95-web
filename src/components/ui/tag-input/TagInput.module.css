@@ -1,0 +1,51 @@
+.wrapper {
+  border: 2px solid var(--border);
+  background: var(--void2, #160828);
+  padding: 8px;
+}
+
+.wrapper:focus-within {
+  border-color: var(--border-lit);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  padding: 3px 6px;
+}
+
+.remove {
+  background: none;
+  border: none;
+  color: var(--cyan);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 100px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.input:focus {
+  outline: none;
+}
